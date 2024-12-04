@@ -1,0 +1,56 @@
+# Informações do grupo
+Grp:
+  columns:
+    - name: grp_id
+      type: INTEGER
+      options: 
+        - PRIMARY KEY
+        - AUTOINCREMENT
+
+    - name: grpName
+      type: TEXT
+      options: 
+
+    - name: narrador
+      type: INTEGER
+      options: NOT NULL
+
+  table_options:
+    - FOREIGN KEY (narrador) REFERENCES User(matr)
+    - UNIQUE (grpName, narrador)
+
+# Participantes pertencentes ao grupo
+Participants:
+  columns:
+    - name: grp_id
+      type: INTEGER
+      options: NOT NULL
+
+    - name: members
+      type: INTEGER NOT NULL
+      options:
+
+  table_options:
+    - FOREIGN KEY (grp_id) REFERENCES Grp(grp_id)
+    - FOREIGN KEY (members) REFERENCES User(matr)
+
+
+MeshUp:
+  columns:
+    - name: mesh_id
+      type: INTEGER
+      options: 
+        - PRIMARY KEY
+        - AUTOINCREMENT
+
+    - name: mesh_name
+      type: TEXT
+      options: NOT NULL
+
+    - name: members
+      type: INTEGER NOT NULL
+      options:
+
+  table_options:
+    - FOREIGN KEY (members) REFERENCES Grp(grp_id)
+    

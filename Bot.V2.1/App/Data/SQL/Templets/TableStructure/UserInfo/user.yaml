@@ -1,0 +1,145 @@
+# ----------------------
+# Informações do Usuario
+# Id do WhatsApp
+wa_id: &wa_id
+  name: wa_id
+  type: TEXT
+# Matricula de usuario
+matr: &matr
+  name: matr
+  type: INTEGER
+# Nome de usuario
+name: &name
+  name: name
+  type: TEXT
+# Posição executada pelo usuario
+role: &role
+  name: role
+  type: TEXT
+# Idade do usuario
+age: &age
+  name: age
+  type: INTEGER
+# Genero do usuario
+gender: &gender
+  name: gender
+  type: TEXT
+# Curso de origem do usuario
+origin: &origin
+  name: origin
+  type: TEXT
+# Raça do usuario
+race: &race
+  name: race
+  type: TEXT
+# usuairo trancou o semestre
+trancou: &trancou
+  name: trancou
+  type: INTEGER
+# Ultima posição da conversa do usuario
+convo: &convo
+  name: convo
+  type: TEXT
+#
+# Dia de aula
+day: &day
+  name: day
+  type: TEXT
+# Recebeu a mensagem 
+recived: &recived
+  name: recived
+  type: INETEGER
+# 
+# Nota do aluno no dia
+grade: &grade
+  name: grade
+  type: REAL
+# Presença na aula
+attend: &attend
+  name: attend
+  type: INTEGER
+# É reposição 
+rep: &rep
+  name: rep
+  type: INTEGER
+# --------------
+
+# Tabela de Usuario
+UserInfo:
+  columns:
+    - *wa_id
+      options: PRIMARY KEY
+
+    - *matr
+      options: DEFAULT 0
+  
+    - *name
+      options: DEFAULT 'UNKNOWN'
+  
+    - *role
+      options: DEFAULT 'UNKNOWN'
+  
+    - *age
+      options: DEFAULT 0
+    
+    - *gender
+      options: DEFAULT 'UNKNOWN'
+  
+    - *origin
+      options: DEFAULT 'UNKOWN'
+
+    - *race
+      options: DEFAULT 'UNKOWN'
+
+    - *trancou
+      options: 
+        - DEFAULT 0
+        - CHECK (trancou IN (0, 1)) # Sim ou não
+
+    - *convo
+      options: DEFAULT 0 # Zero é que não tem o que continuar
+
+  table_options:
+    - UNIQUE (wa_id, matr)
+
+# Tabela de Aviso 
+Warned:
+  columns:
+    - *day
+      options: NOT NULL
+
+    - *wa_id
+      options: NOT NULL
+    
+    - *recived
+      options: 
+        - DEFAULT 0
+        - CHECK (recivied IN (0, 1))
+    table_options:
+      - FOREIGN KEY (wa_id) REFERENCES User(wa_id)
+      - UNIQUE (wa_id, day) 
+
+Grade:
+  columns:
+    - *matr
+      options: NOT NULL
+
+    - *day
+      options: NOT NULL
+
+    - *grade
+      options: DEFAULT 0
+
+    - *attend
+      options:
+        - DEFAULT 0
+        - CHECK (attend IN (0, 1))
+
+    - *rep
+      options:
+        - DEFAULT 0
+        - CHECK (rep IN (0, 1))
+  
+  table_options:
+    - FOREIGN KEY (matr) REFERENCES User(matr)
+    - UNIQUE (matr, day)

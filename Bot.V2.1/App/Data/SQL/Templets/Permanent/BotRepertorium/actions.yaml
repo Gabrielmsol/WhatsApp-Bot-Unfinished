@@ -1,0 +1,21 @@
+# Ações que o usuario pode solicitar do bot
+
+Actions:
+  columns:
+  
+    - name: id
+      type: INTEGER
+      options: 
+        - AUTOINCREMENT 
+        - PRIMARY KEY
+
+      - name: action
+        type: TEXT
+        options: NOT NULL
+
+      - name: prompt
+        type: TEXT
+        options: NOT NULL
+        
+  table_options:
+    - UNIQUE (action, prompt)

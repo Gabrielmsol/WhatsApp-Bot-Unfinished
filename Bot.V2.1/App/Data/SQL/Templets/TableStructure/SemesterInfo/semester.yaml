@@ -1,0 +1,68 @@
+# -------------------------
+# Informações do semestre
+# Ano atual
+year: &year
+  name: year
+  type: INTEGER
+# Periodo letivo
+period: &periodo
+  name: period
+  type: INTEGER
+# Incio do perido
+start: &start
+  name: start
+  type: TEXT
+# Final do periodo
+end: &end
+  name: end
+  type: TEXT
+#
+# Dia do evento
+event_day: &event_day
+  name: event_day
+  type: TEXT
+# Evento
+event: &event
+  name: event
+  type: TEXT
+# ------------------
+
+
+
+
+
+# Info do semestre, inicio fim 
+Semester: 
+  columns:
+    - *year
+      options: NOT NULL
+
+    - *period
+      options:
+        - NOT NULL 
+        - CHECK (period IN (1, 2))
+
+    - *start
+      options:
+
+    - *end
+      options:
+
+  table_options:
+    - UNIQUE (year, period)
+
+# Informações de eventos proximos, marcados pelo professor
+UpComingEvents:
+  columns:
+    - *event_day
+      options: NOT NULL
+
+    - *event
+      options:
+
+  table_options:
+
+
+
+
+  

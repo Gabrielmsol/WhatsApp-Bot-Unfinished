@@ -1,0 +1,108 @@
+# Primeiras perguntas a serem feitas
+# Bot vai rodar por elas no primeiro contato
+M0: # Intro do Bot
+  type: text
+  text:
+    body: |
+      Oii, prazer em lhe conhecer, me chamo Luanda,
+      sou uma robozinha, criada com carinho para ajudar na 
+      sua materia :).
+      Bem, antes de começarmos, posso te fazer algumas perguntas ?
+      Elas são importantes, não precisa ter medo de errar, da para alterar
+      tudo depois de pronto.
+
+M1: # Perguntar se o nome serve
+  type: text
+  text: 
+    body: Você esta confortavel comigo lhe chamando de **fulano** ?
+
+M2: # Mais explicação
+  type: text
+  text: 
+    body: |
+      Agora quero algumas informações sobre o semestre.
+      Essa parte vai ser necessária no inicio de todo semestre,
+      você que vai iniciar a conversa comigo e me pedir. 
+      Vou te mostrar o passo a passo, não se preocupe.
+
+M3: # Botão que explica como iniciar um novo semestre
+  type: interactive
+
+  interactive:
+    type: button
+
+    body:
+      text: | 
+        Essa opoção ira iniciar um novo semestre, a partir
+        do momento em que você confirmar eu vou sempre
+        me referir a este semestre. Ainda é possível checar
+        semestres passados, mas todas as minhas ações com 
+        Narradores e alunos serão referentes a este novo
+        semestre.
+    
+    action:
+      buttons:
+        - type: reply # Começa semestre
+          reply:
+            id: start_semestre
+            title: Novo semestre
+
+M4: # Explica formato
+  type: text
+  text:
+    body: |
+      Responda as perguntas a baixo, no formato solicitado.
+
+M5: # Inicio do semestre
+  type: text
+  text: 
+    body: | 
+      Quando o semestre começa ?
+      formato: dias/mês/ano
+
+M6: # Fim do semestre
+  type: text
+  text:
+    body: |
+      Quando o semestre acaba ?
+      formato: dia/mês/ano
+
+M7: # Periodo do semestre
+  type: button
+
+  body: 
+    text: É o primeiro ou segundo semestre?
+
+  action:
+    buttons:
+      - type: reply # Primeiro
+        reply:
+          id: TODO
+          title: Primeiro
+
+      - type: reply # Segundo
+        reply:
+          id: TODO
+          title: Segundo
+
+M8: # Pede contato dos narradores
+  type: text
+  text:
+    body: |
+      Maravilha estamos acabando. 😊
+      Preciso agora que me envie o contato dos narradores.
+      Você pode adcionar mais depois, mas é que preciso de
+      no minimo um narrador. 
+      Quando terminar de enviar todos, me envia uma mensagem
+      dizendo: "Acabei".
+      Para os que não possuem número de telefone, ignore por enquanto.
+
+M9: # Finalização
+  type: text
+  text: 
+    body: |
+      Acabamos aqui (*/ω＼*)
+      Vou te enviar uma lista dos contatos que tive problema em contatar,
+      se não houver lista não ha problema. 
+      Você pode checar quem me respondeu na aba de Narradores.
+      

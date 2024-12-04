@@ -1,0 +1,22 @@
+# ------------------
+# Informações do ADM
+# Numero do WhatsApp
+wa_id: &wa_id
+  name: wa_id
+  type: TEXT
+# Nome do adm
+name: &name
+  name: name
+  type: TEXT
+# ---------------
+
+# Tabela de adm
+Adm:
+  columns:
+    - *wa_id
+      options: PRIMARY KEY 
+
+    - *name
+      options: NOT NULL
+      
+  table_options:

@@ -1,0 +1,54 @@
+M0: # Intro
+  type: text
+  text: 
+    body: |
+      Oiii, obrigada por me responder, seu narrador de grupo *Narrador* me enviou seu contato
+      sou um robozinho feitio na UnB para te ajudar nessas materia.
+
+M1: # Nome
+  type: text
+  text:
+    body: "Você esta confortavel comigo lhe chamando de __fulano__ ?"
+
+M2: # Explicação
+  type: text
+  text:
+    body: |
+      Antes de continuarmos, vou te fazer umas perguntinhas. Não precisa responder, se não quiser
+      e se errar não tem problema.
+      Caso não queira responder, é so escrever "não"
+      So tem uma que você necessita responder, que é seu número de matricula.
+
+M3: # Matricula
+  type: text
+  text:
+    body: "Falando em número de matrícula, qual é a sua ?"
+
+M3: # genero
+  type: text
+  text:
+    body: "Você se identifica com  qual genero"
+
+M4: # etinia
+  type: text
+  text:
+    body: "Com qual etinia você se identifica?"
+
+M5: # Curso de origem
+  type: text
+  text:
+    body: "Qual é o seu curso de origem?"
+
+M6: # OBS
+  type: text
+  text:
+    body: "Possui alguma observação importante para o professor?"
+
+M7: # Final
+  type: text
+  text:
+    body: |
+      Lindo, acabamos.
+      Agora vou te mostar minha pagina incial. 
+      De agora em diante sempre que iniciarmos uma conversa, 
+      vou começar de la.

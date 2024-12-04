@@ -1,0 +1,11 @@
+Adm:
+  columns:
+    - name: wa_id
+      type: TEXT
+      options: PRIMARY KEY 
+
+    - name: name
+      type: TEXT
+      options: NOT NULL
+      
+  table_options:

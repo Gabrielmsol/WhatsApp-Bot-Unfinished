@@ -1,0 +1,254 @@
+# Aqui esta uma cola de como enviar mensagem no whatsapp
+#
+Header: 
+  messaging_product: whatsapp
+  recipient_type: individual
+  to: ""
+  
+
+BottomHeader: 
+  Content-type:  "application/json"
+  Authorization: ""
+  
+# Padrão que facebook aceita
+MetaPattern:
+  text:
+    type: text
+    text:
+      body: ""
+
+  image:
+    type: image
+    image:
+      link: ""
+
+  video:
+    type: video
+    video:
+      link: ""
+  
+  document: 
+    type: document
+    document: 
+      link: ""
+      filename: ""
+
+  audio:
+    type: audio
+    audio:
+      link: ""
+
+  location:
+    type: location
+
+    location:
+      latitude: ""
+      longitude:  ""
+      name:  ""
+      address: ""
+
+  contacts:
+    type: contacts
+
+    contacts:
+      - name:
+          formatted_name: ""
+          first_name: ""
+          last_name: "" 
+
+        phones:
+          - phone: ""
+            type: CELL
+  
+    
+sticker:
+  type: sticker
+  sticker:
+    link: 
+
+  button:
+    type: interactive
+
+    interactive:
+      type: button
+
+      body:
+        text: ""
+
+      action:
+        buttons:
+          - type: reply
+            reply:
+              id: ""
+              title: ""
+
+  list: 
+    type: interactive
+
+    interactive:
+      type: list
+
+      header:
+        type: text
+        text: ""
+
+      body:
+        text: ""
+
+      footer:
+        text: ""
+
+      action:
+        button: ""
+
+        sections:
+          - title: ""
+            rows:
+              - id: ""
+                title: ""
+                description: ""
+
+  template:
+    type: template
+    
+    template:
+      name: hello_world
+      language: 
+        code: en_US
+
+
+SelfPathern: 
+
+  text: 
+    text: ""
+    
+  image:
+   link: ""
+
+  video:
+    link: ""
+  
+  audio:
+    link: ""
+
+  sticker:
+    link: ""
+
+  document:
+    link: ""
+    name: ""
+  
+  contacts:
+    - name: ""
+      first_name: ""
+      last_name: ""
+      phone: ""
+
+  location:
+    latitude: ""
+    longitude:  ""
+    name:  ""
+    address: ""
+
+  button:
+    body: ""
+    buttons:
+      - id: ""
+        body: ""
+
+  list:
+    header: ""
+    body: ""
+    footer: ""
+    button: ""
+    sections:
+      - section: ""
+        rows:
+          - id: ""
+            body: ""
+            description: ""
+
+
+# Caminho de cada item
+SelfToMeta:
+
+  text: 
+    paths: 
+      - [["body"], ["text", "body"]]
+
+  image:
+    paths: 
+      - [["link"], ["image", "link"]]
+
+  video:
+    paths: 
+      - [["link"], ["video", "link"]]
+
+  audio:
+    paths:
+      - [["link"], ["audio", "link"]]
+
+  sticker:
+    paths: 
+      - [["link"], ['sticker', 'link']]
+  
+  document:
+    paths:
+      - [["link"], ['document', 'link']]
+      - [["name"], ['document', 'filename']]
+
+  contacts: 
+    paths:
+      - [["name"], ['contacts', 'name', 'formatted_name']]
+      - [["first_name"], ['contacts', 'name', 'first_name']]
+      - [["last_name"], ['contacts', 'name', 'last_name']]
+      - [["phone"], ['contacts', 'phones', 'phone']]
+
+  button:
+    paths:
+    - [["body"], ['interactive', 'body', 'text']]
+    - [["buttons", "_N_","id"], ['interactive', 'action', 'buttons', "_N_" ,'reply', 'id']]
+    - [["buttons", "_N_","body"], ['interactive', 'action', 'buttons', "_N_" ,'reply', 'title']]
+
+  list:
+    paths:
+      - [["header"], ['interactive', 'header']] 
+      - [["body"], ['interactive', 'body']]  
+      - [["footer"], ['interactive', 'body', 'footer', 'text']]
+      - [["button"], ['interactive', 'body', 'action', 'button']] 
+      - [["sections", "_N_" , "section"], ['interactive', 'action', 'section', 'sections',"_N_", 'title']] 
+      - [["sections", "_N_", "rows", "_M_", "id"], ['interactive', 'action', 'section', 'sections',"_N_" 'rows', "_M_", 'id']]
+      - [["sections", "_N_", "rows", "_M_", "text"], ['interactive', 'action', 'section', 'sections',"_N_" 'rows', "_M_", 'title']]
+      - [["sections", "_N_", "rows", "_M_", "description"], ['interactive', 'action', 'section', 'sections',"_N_", 'rows', "_M_", 'description']]
+
+
+
+
+
+
+
+
+
+
+
+
+Test:
+  list:
+    header: Header
+    body: Body
+    footer: Footer
+    button: Button
+    sections:
+      - section: Section0
+        rows:
+          - id: Id0
+            body: Body0
+            description: Description0
+          - id: Id1
+            body: Body1
+            description: Description1
+      - section: Section
+        rows:
+          - id: Id
+            body: Body
+            description: Description

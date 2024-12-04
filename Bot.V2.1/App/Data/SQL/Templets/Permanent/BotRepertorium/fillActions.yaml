@@ -1,0 +1,97 @@
+# Frases
+# -------------------------------
+# # Verbos/ Ações possiveis
+add: &add "Adicionar"
+change: &change "Alterar"
+remove: &remove "Remover"
+confirm: &confirm "Confirmar"
+join: &join "Juntar"
+# ------------------------
+# # Sujeitos/ Sofrem ação
+name: &name "nome"
+matr: &matr "número de matrícula"
+age: &age "idade"
+gender: &gender "declaração de identificação de genero"
+origin: &origin "declaração de curso de origem"
+race: &race "declaração de identificação etinica"
+group: &group "Grupo"
+participant: &participant "participante"
+# --------------------------------
+# # Complementos nominais dos sujeito
+self: &self "proprio"
+other: &other "outro"
+# ---------------------------------
+# # Conversa Inicial 
+# # # Para Adm
+# # # # So aparecera uma vez
+# Apresnetação
+adm_default_starter: &adm_default_starter |
+Ah obrigada por me retirar da minha prisão,
+facebook não me permite falar se você não me responder primeiro. 
+Bem, oii *fulano*, prazer em te conhecer. 
+Me chamo Luanda, sou um robozinho 
+criado com muito carinho para lhe ajudar.
+
+Irei lhe perguntar algumas coisinhas, mas isso vai ser so uma vez, 
+não se preocupe. Também não tenha medo de errar,
+todas as informações podem ser alteradas.
+
+# Nome
+adm_Q_1: &adm_Q_1 "Você esta confortavel comigo lhe chamando de *fulano* ?"
+# semestre
+adm_follow_up_1: &adm_follow_up_1 |
+Então agora, sobre o semestre. 
+Essa parte vai se repetir todo semestre.
+Lembrando que você pode alterar essas informações sempre que quiser.
+Agora você vai me responder algumas perguntas importantes.
+Responda elas apenas com uma mensagem no formato pedido.
+# inicio
+adm_Q_2: &adm_Q_2 |
+O semestre começa ou começou em que dia?
+Formato - dia/mês/ano
+Exemplo - 01/01/2001
+# fim
+adm_Q_3: &adm_Q_3 |
+Ele esta previsto acabar em que data ?
+Formato -> dia/mês/ano
+# semestre
+adm_Q_4: &adm_Q_4 |
+É o primeiro ou segundo semestre ?
+# Narradores
+adm_Q_5: &adm_Q_5 |
+Perfeito, estamos quase acabando.
+Agora eu vou pedir que me informe o telefone de todos os narradores.
+Pode jogar do jeito que preferir. 
+Se eu não entender eu cobro, joga os contatos aqui que eu dou um jeito.
+Quando acabar me envia a mensagem -> É so isso!
+# final
+adm_final: &adm_final |
+Pronto acabamos então, olha se quiser adicionar mais alguem ou alguma coisa. 
+So falar comigo de novo.
+
+## Para Narrador
+### So aparece uma vez
+# Apresentação
+narrador_default_starter: &narrador_default_starter |
+Ah obrigada, desculpa por minha mensagem acima, facebook ainda não me permite...
+Me chamo Luanda sou uma assistente virtual. O professor *adm* da UNB 
+Universidade nacional de Brasília me enviou seu contato.
+# Confirma contato
+narrador_Q_1: &narrador_Q_1 |
+Então acertei seu contato ? 
+# Perguntas
+narrador_follow_up: &narrador_follow_up |
+Perfeito, vou me apresentar um pouco mais.
+Como disse me chamo Luanda, fui feita para te ajudar com seu trabalho de narrador
+Vou te explicar nossa dinamica do curso, mas antes posso te fazer umas perguntas ?
+Se voce não se sentir confortavel em responder ela pode simplesmente ignorar
+
+narrador_Q_2: &narrador_Q_2 |
+Você esta confortavel com eu lhe chamando de *fulano* ?
+
+narrador_Q_3: &narrador_Q_3 |
+Qual é o seu número de matricula ?
+
+narrador_Q_4: &narrador_Q_4 |
+Qual a sua idade ?
+

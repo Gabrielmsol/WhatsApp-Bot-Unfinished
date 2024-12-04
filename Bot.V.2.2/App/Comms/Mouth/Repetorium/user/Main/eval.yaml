@@ -1,0 +1,34 @@
+starter: 
+  type: text
+  text:
+    body: |
+      Ou psiu, agora que você ta longe do narrador, que tal avalar ele ?
+      Se não quiser não ha problema, mas seria bom se fizesse isso
+      ψ(｀∇´)ψ
+      Avalie com uma nota de 0 a 7. Sim 0 a 7, para quebrar paradigmas.
+      Isso não impacta a nota do narrador, é so para saber se ta tudo bem.
+
+P1:
+  type: text
+  text: 
+    body: |
+      Voce sentiu que o narrador te tratou bem ?
+
+ 
+P2:
+  type: text
+  text: 
+    body: |
+      Você se sentiou que o narrador te incluiu na seção?  
+
+P3:
+  type: text
+  text: 
+    body: |
+      Sente que a seção tem coesão, que tem sentido com o conteudo ?
+
+P4:
+  type: text
+  text: 
+    body: |
+      Por ultimo tem alguma observação para a seção de hoje ?

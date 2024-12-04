@@ -1,0 +1,28 @@
+# Tabela de perguntas
+Questions:
+  columns:
+
+    - name: id
+      type: INTEGER
+      options: 
+        - AUTOINCREMENT
+        - PRIMARY KEY
+
+    - name: type
+      type: TEXT
+      options: NOT NULL
+
+    - name: question
+      type: TEXT
+      options: NOT NULL
+
+    - name: comp_questions
+      type: TEXT
+      options: NOT NULL
+
+    - name:  # Não tenho ideia de como continuar... 
+
+    
+
+  table_options:
+      

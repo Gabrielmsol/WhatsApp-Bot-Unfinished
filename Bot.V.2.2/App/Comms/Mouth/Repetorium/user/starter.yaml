@@ -1,0 +1,51 @@
+list: 
+  type: interactive
+  interactive:
+    type: list
+
+    header:
+      type: text
+      text: ""
+
+    body:
+      text: |
+        Oi estou aqui para tirar suas duvidas
+        e te ajudar na materia.
+
+    footer:
+      text: ""
+
+    action:
+      button: "Mostrar opções"
+
+      sections:
+        - title: "Informações pessoais"
+          rows:
+            - id: TODO # Nome
+              title: "Nome"
+              description: ""
+
+            - id: TODO # Matricula
+              title: "Matricula"
+              description: ""
+
+            - id: TODO # Genero
+              title: "Genero"
+              description: ""
+            
+            - id: TODO
+              title: "Etinia"
+              description: ""
+            
+            - id: TODO
+              title: "Curso de origem"
+              description: ""
+        - title: "Duvidas"
+          rows:
+            - id: TODO
+              title: "Plano de ensino"
+              description: ""
+            
+            - id: TODO
+              title: "Duvidasss"
+              description: "Usa o chat GPT"

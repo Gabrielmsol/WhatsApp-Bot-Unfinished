@@ -1,0 +1,22 @@
+Starter:  
+  type: interactive
+  interactive:
+    type: button
+
+    body:
+      text: |
+        Deseja informações sobre:
+        Grupo -> Grupo especifico,
+        Turma -> Informações gerais. 
+
+    action:
+      buttons:
+        - type: reply # Grupo
+          reply:
+            id: Todo
+            title: "Grupo"
+        
+        - type: reply # Turma
+          reply:
+            id: Todo
+            title: "Turma"

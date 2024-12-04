@@ -1,0 +1,55 @@
+# Info do semestre, inicio fim 
+Semester: 
+  columns:
+    - name: year
+      type: INTEGER
+      options: NOT NULL
+
+    - name: period
+      type: INTEGER
+      options:
+        - NOT NULL 
+        - CHECK (period IN (1, 2))
+
+    - name: start
+      type: TEXT
+      options:
+
+    - name: end
+      type: TEXT
+      options:
+
+  table_options:
+    - UNIQUE (year, period)
+
+# Informações de eventos proximos, marcados pelo professor
+UpComingEvents:
+  columns:
+    - name: day
+      type: TEXT
+      options: NOT NULL
+
+    - name: event
+      type: TEXT
+      options:
+
+  table_options:
+
+# Informações sobre dias de aula 
+Date:
+  columns:
+    - name: day
+      type: TEXT
+      options: PRIMARY KEY
+
+    - name: confirmation
+      type: INTEGER
+      options:
+        - DEFAULT 1
+        - CHECK (confirmation IN (0, 1))
+    
+  table_options:
+
+
+
+  

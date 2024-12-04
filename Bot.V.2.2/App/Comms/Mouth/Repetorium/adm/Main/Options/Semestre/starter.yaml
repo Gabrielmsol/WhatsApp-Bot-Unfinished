@@ -1,0 +1,67 @@
+Semestre:
+  type: interactive
+  interactive:
+    type: list
+
+    header:
+      type: text
+      text: ""
+
+    body: # Explicação
+      text: |
+        Seguem as opções resquardadas ao semestre a baixo.
+        (*￣3￣)╭.
+        Selecione o assunto que deseja mudar, ou saber sobre.
+
+    footer:
+      text: ""
+
+    action:
+      button: "Mostrar Opções"
+
+      sections:
+        - title: "Periodo letivo"
+          rows:
+            - id: TODO # Inicio 
+              title: Inicio do semestre
+              description: ""
+
+            - id: TODO # FIm
+              title: Final do semestre
+              description: ""
+
+            - id: TODO # Avisos
+              title: Avisos
+              description: "Feriados/ Observações"
+          
+        - title: "Estatisticas"
+          rows:
+            - id: TODO # Turma
+              title: "Nota media"
+              description: "Turma"
+            
+            - id: TODO # Narradores
+              title: "Nota media"
+              description: "Narradores"
+            
+            - id: TODO # Jogadores
+              title: "Nota media"
+              description: "Jogadores"
+            
+        - title: "Tabelas de Notas"
+          rows:
+            - id: TODO # Turma
+              title: "Turma"
+              description: ""
+            
+            - id: TODO # Narradores
+              title: "Narradores"
+              description: ""
+            
+            - id: TODO # Jogadores
+              title: "Jogadores"
+              description: ""
+            
+            - id: TODO # Grupos
+              title: "Grupos"
+              description: ""

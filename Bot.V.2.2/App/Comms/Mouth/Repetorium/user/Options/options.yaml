@@ -1,0 +1,112 @@
+Continue:
+  type: interactive
+  interactive:
+    type: button
+    body:
+      text: ""
+      
+    action:
+      buttons:
+        - type: reply # Continuar
+          reply:
+            id: TODO
+            title: "Continuar"
+        
+        - type: reply # Voltar
+          reply:
+            id: TODO
+            title: "Voltar"
+
+See:
+  type: interactive
+  interactive:
+    type: button
+    body:
+      text: ""
+      
+    action:
+      buttons:
+        - type: reply # Ver
+          reply:
+            id: TODO
+            title: "Ver"
+
+        - type: reply # Voltar
+          reply:
+            id: TODO
+            title: "Voltar"
+
+ChangeCont:
+  type: interactive
+  interactive:
+    type: list
+
+    header:
+      type: text
+      text: ""
+
+    body: # Deseja
+      text: "Deseja"
+
+    footer:
+      text: ""
+
+    action:
+      button: "Mostrar Opções"
+      sections:
+        - title: ""
+          rows:
+            - id: TODO # Continuar
+              title: "Continuar"
+              description: ""
+
+            - id: TODO # Alterar
+              title: "Alterar"
+              description: ""
+            
+            - id: TODO # Remover
+              title: "Remover"
+              description: ""
+            
+            - id: TODO # Voltar
+              title: "Voltar"
+              description: ""
+            
+            
+ChangeSee:
+  type: interactive
+  interactive:
+    type: list
+
+    header:
+      type: text
+      text: ""
+
+    body: # Deseja
+      text: "Deseja"
+
+    footer:
+      text: ""
+
+    action:
+      button: "Mostrar Opções"
+      sections:
+        - title: ""
+          rows:
+            - id: TODO # ver
+              title: "Ver"
+              description: ""
+
+            - id: TODO # Alterar
+              title: "Alterar"
+              description: ""
+            
+            - id: TODO # Remover
+              title: "Remover"
+              description: ""
+            
+            - id: TODO # Voltar
+              title: "Voltar"
+              description: ""
+            
+            

@@ -1,0 +1,68 @@
+M0: # Introdução
+  type: text
+  text:
+    body: |
+      Oi obrigada por me responder. 
+      Professor __ADM__ da Universidade de Brasília recomendou você como Narrador.
+      Se isto não soa familiar para ti pode ignorar esta mensagem.
+      Se não confirmar em ate 2 dias eu levarei como um engano esta mensagem.
+      Bem me chamo Luanda, sou sua assitente nesta materia.
+      Meu objetivo é ajudar você nesta materia.
+
+M1: # Pergunta sobre nome
+  type: text
+  text:
+    body: |
+      Você esta confortavel comigo lhe chamando de __fulano__ ?
+
+M2: # Explica
+  type: text
+  text:
+    body: |
+      Vou lhe fazer algumas perguntas, não precisa responder, se quiser pode apenas pular.
+      Somente o número de matricula que é obrigtórtio.
+      Você pode mudar as respostas sempre que desejar
+
+M3: # Perguntas, matricula
+  type: text
+  text:
+    body: "Qual é o seu número de matrícula?"
+
+M4: # Etinia 
+  type: text
+  text:
+    body: "Qual etinia voce se identifica?"
+
+M5: # genero
+  type: text
+  text:
+    body: "Qual genero você se identifica?"
+
+M6: # Curso de origem
+  type: text
+  text:
+    body: "Qual é o seu curso de origem ?"
+
+M6: # Observações
+  type: text
+  text:
+    body: "Possui alguma observação que gostaria que o Professor soubesse?"
+
+M7: # Pede participantes do grupo
+  type: text
+  text:
+    body: |
+      Estamos quase no final, ( •̀ ω •́ )y
+      Preciso de mais uma coisinha de ti, que me envie os contatos dos participantes do seu grupo ;_;
+      Preciso que envie em forma de contato, clicla no clips e seleciona os contatos, quando acabar me envia a mensagem
+      acabei.
+      Não tem problema se esquecer de alguem, tem como adicionar e retirar gente depois.
+      Quando quiser nomear seu grupo, tem como nas opções de grupo. 
+      ( ͡ಠ ʖ̯ ͡ಠ)
+
+M8: # Final
+  type: text
+  text:
+    body: |
+      Perfeito acabamos aqui.
+      Agora vou enviar a mensagem padrão que lhe enviarei, toda vez que iniciarmos uma nova conversa.

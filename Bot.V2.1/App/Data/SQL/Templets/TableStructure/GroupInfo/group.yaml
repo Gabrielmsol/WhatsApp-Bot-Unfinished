@@ -1,0 +1,75 @@
+# --------------------
+# Dados sobre grupos
+# id do grupo
+grp_id : &grp_id
+  name: grp_id
+  type: INTEGER
+# nome do grupo
+grpName: &grpName
+  name: grpName
+  type: TEXT
+# Narrador responsavel pelo grupo
+narrador: &narrador
+  name: narrador
+  type: INTEGER
+# 
+# Mebros do grupo numero de matricula
+members: &members
+  name: members
+  type: INTEGER
+#
+# Id do MeshUp de grupos 
+mesh_id: &mesh_id
+  name: mesh_id
+  type: INETEGER
+# Grupos que fazem parte do mesh up
+mesh_mebers: &mesh_members
+  name: mesh_members
+  type: INTEGER
+# ------------------
+
+# Tabela de Grupo
+Grp:
+  columns:
+    - *grp_id
+      options: 
+        - PRIMARY KEY
+        - AUTOINCREMENT
+
+    - *grpName
+      options: 
+
+    - *narrador
+      options: NOT NULL
+
+  table_options:
+    - FOREIGN KEY (narrador) REFERENCES User(matr)
+    - UNIQUE (grpName, narrador)
+
+# Tabela de Participantes
+Participants:
+  columns:
+    - *grp_id
+      options: NOT NULL
+
+    - *members 
+      options: NOT NULL
+
+  table_options:
+    - FOREIGN KEY (grp_id) REFERENCES Grp(grp_id)
+    - FOREIGN KEY (members) REFERENCES User(matr)
+
+# Tabela de MeshUp
+MeshUp:
+  columns:
+    - *mesh_id
+      options: 
+        - PRIMARY KEY
+        - AUTOINCREMENT
+
+    - *mesh_members
+      options: NOT NULL
+
+  table_options:
+    - FOREIGN KEY (mesh_members) REFERENCES Grp(grp_id)
+    

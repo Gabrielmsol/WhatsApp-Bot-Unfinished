@@ -1,0 +1,38 @@
+Participants: 
+  type: interactive
+  interactive:
+    type: list
+
+    header:
+      type: text
+      text: ""
+
+    body:
+      text: ""
+
+    footer:
+      text: ""
+
+    action:
+      button: "Mostrar Opções"
+
+      sections:
+        - title: ""
+          rows:
+            - id: TODO
+              title: "Marcar Presença"
+              description: ""
+            
+            - id: TODO
+              title: "Avaliar Participação"
+              description: ""
+
+            - id: TODO
+              title: "Mudar metodo de avaliação"
+              description: ""
+
+        - title: "MeshUps"
+          rows:
+            - id: TODO
+              title: "MeshUp"
+              description: ""

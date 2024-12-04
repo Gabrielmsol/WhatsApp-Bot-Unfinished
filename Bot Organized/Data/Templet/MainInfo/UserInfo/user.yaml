@@ -1,0 +1,149 @@
+# Informações de usuarios
+UserInfo:
+  columns:
+    - name: wa_id # Id do whats app
+      type: TEXT
+      options: PRIMARY KEY
+
+    - name: matr # Numero de matricula
+      type: INTEGER
+      options: DEFAULT 0
+  
+    - name: name
+      type: TEXT
+      options: DEFAULT 'UNKNOWN'
+  
+    - name: role # Qual papel o aluno faz no grupo
+      type: TEXT
+      options: DEFAULT 'UNKNOWN'
+  
+    - name: age 
+      type: INTEGER
+      options: DEFAULT 0
+    
+    - name: gender
+      type: TEXT
+      options: DEFAULT 'UNKNOWN'
+  
+    - name: origin # Curso de origem
+      type: TEXT
+      options: DEFAULT 'UNKOWN'
+
+    - name: raca # raça da pessoa
+      type: TEXT
+      options: DEFAULT 'UNKOWN'
+
+    - name: trancou # Trancou o semestre 
+      type: INTEGER
+      options: 
+        - DEFAULT 0
+        - CHECK (trancou IN (0, 1))
+
+    - name: last_convo # Informações da ultima conversa, aonde parou 
+      type: INTEGER
+      options: DEFAULT 0 # Zero é que não tem o que continuar
+
+  table_options:
+    - UNIQUE (wa_id, matr)
+  
+# Informações, se perguntas foram feitas ao usuario
+BasicQuestions:
+  columns:
+    - name: wa_id
+      type: TEXT
+      options: 
+
+    # Pergountou 1 sim, 0 não
+    - name: name 
+      type: INTEGER
+      options: 
+        - DEFAULT 0
+        - CHECK (name IN (0, 1))
+
+    - name: gender
+      type: INTEGER
+      options:
+        - DEFAULT 0
+        - CHECK (gender IN (0, 1)) 
+
+    - name: matr
+      type: INTEGER
+      options: 
+        - DEFAULT 0
+        - CHECK (matr IN (0, 1))
+
+    - name: origin
+      type: INTEGER
+      options: 
+        - DEFAULT 0
+        - CHECK (origin IN (0, 1))
+
+    - name: age
+      type: INTEGER
+      options: 
+        - DEFAULT 0
+        - CHECK (age IN (0, 1))
+    
+    - name: raca 
+      type: INTEGER
+      options: 
+        - DEFAULT 0
+        - CHECK (raca IN (0, 1))
+  
+  table_options:
+    - FOREIGN KEY (wa_id) REFERENCES User(wa_id)
+
+# Verifica se o usuario recebeu o aviso 
+Warned:
+  columns:
+    - name: day
+      type: TEXT
+      options: NOT NULL
+
+    - name: wa_id
+      type: TEXT
+      options: NOT NULL
+    
+    - name: seen
+      type: INTEGER
+      options: 
+        - DEFAULT 0
+        - CHECK (seen IN (0, 1))
+    table_options:
+      - FOREIGN KEY (wa_id) REFERENCES User(wa_id)
+      - UNIQUE (wa_id, day) 
+
+# Informações de notas de cada dia
+Grade:
+  columns:
+    - name: matr
+      type: INTEGER
+      options: NOT NULL
+
+    - name: day
+      type: TEXT
+      options: NOT NULL
+
+    - name: grade
+      type: REAL
+      options: DEFAULT 0
+
+    - name: addend
+      type: TEXT
+      options: DEFAULT 'None'
+
+    - name: attend
+      type: INTEGER
+      options:
+        - DEFAULT 0
+        - CHECK (attend IN (0, 1))
+
+    - name: rep
+      type: INTEGER 
+      options:
+        - DEFAULT 0
+        - CHECK (rep IN (0, 1))
+  
+  table_options:
+    - FOREIGN KEY (matr) REFERENCES User(matr)
+    - UNIQUE (matr, day)

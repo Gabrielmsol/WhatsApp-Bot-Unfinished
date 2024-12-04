@@ -1,0 +1,78 @@
+Start: 
+  type: interactive
+  interactive:
+    type: list
+
+    header:
+      type: text
+      text: ""
+
+    body:
+      text: |
+        o(*￣▽￣*)ブ
+        Aqui é o seu menu de controle, sinta-se a vontade para explorar.
+        (〃￣︶￣)人(￣︶￣〃)
+    footer:
+      text: ""
+
+    action:
+      button: "Mostrar Opções"
+
+      sections:
+        - title: "Dados Pessoais"
+          rows:
+            - id: TODO
+              title: "Número de Matrícula"
+              description: ""
+            
+            - id: TODO
+              title: "Nome"
+              description: ""
+            
+            - id: TODO
+              title: "Idade"
+              description: ""
+            
+            - id: TODO
+              title: "Etinia"
+              description: ""
+            
+            - id: TODO
+              title: "Genero"
+              description: ""
+
+            - id: TODO
+              title: "Curso de origem"
+              description: ""
+            
+            - id: TODO
+              title: "Observações"
+              description: ""
+            
+            - id: TODO
+              title: "Faltas"
+              description: ""
+            
+        - title: "Grupo"
+          rows:
+            - id: TODO
+              title: "Nome"
+              description: ""
+
+            - id: TODO
+              title: "Participantes"
+              description: ""   
+            
+            - id: TODO
+              title: "Fazer meshUp"
+              description: "Junta grupos"
+          
+        - title: "Mais"
+          rows:
+            - id: TODO
+              title: "Plano de ensino"
+              description: ""
+
+            - id: TODO
+              title: "Duvidas"
+              description: "Usa chat GPT"

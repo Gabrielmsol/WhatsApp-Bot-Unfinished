@@ -1,0 +1,29 @@
+Grupos:
+  type: interactive
+  interactive:
+    type: list
+
+    header:
+      type: text
+      text: ""
+
+    body:
+      text: |
+        Informações especificas sobre um grupo
+
+    footer:
+      text: ""
+
+    action:
+      button: "Mostrar opções"
+      
+      sections:
+        - title: "Informações"
+          rows:
+            - id: TODO
+              title: "Nome"
+              description: ""
+
+            - id: TODO
+              title: "Participantes"
+              description: ""

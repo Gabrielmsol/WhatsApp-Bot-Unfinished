@@ -1,0 +1,36 @@
+type: interactive
+interactive:
+  type: list
+
+  header:
+    type: text
+    text: ""
+
+  body:
+    text: |
+      Informações gerais dos Grupos
+
+  footer:
+    text: ""
+
+  action:
+    button: "Mostrar Opções"
+
+    sections:
+      - title: "Estatisticas"
+        rows:
+          - id: TODO # Número de Grupos
+            title: "Número de Grupos"
+            description: ""
+          
+          - id: TODO # Particpantes
+            title: "Particpantes"
+            description: "Media"
+
+          - id: TODO # Presenças
+            title: "Presenças"
+            description: ""
+
+          - id: TODO # Satisfação
+            title: "Satisfação"
+            description: "feita por Jogadores e narradores"

@@ -1,0 +1,42 @@
+Starter:
+  type: interactive
+  interactive:
+    type: list
+
+    header: # Titulo
+      type: text
+      text: "" 
+
+    body: # Mensagem principal
+      text: |
+        Oi **fulano**, a baixo segue uma lista das opções
+        que você tem como moderador.
+
+    footer: # Mensagem de pezinho
+      text: De que assunto deseja tratar?
+
+    action:
+      button: Mostar Opções
+      
+      sections:
+        - title: Opções 
+          rows:
+            - id: TODO  # Semestre
+              title: Semestre
+              description: Avisos/ Notas gerais
+
+            - id: TODO # Narradores
+              title: Narradores
+              description: ""
+
+            - id: TODO # Jogadores
+              title: Jogadores
+              description: Não inclui Narradores
+
+            - id: TODO # Grupos
+              title: Grupos
+              description: ""
+
+            - id: TODO # Liga o chat GPT
+              title: Ligar o cerebro
+              description: Usar integração com chat gpt

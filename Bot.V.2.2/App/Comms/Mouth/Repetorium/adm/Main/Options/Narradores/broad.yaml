@@ -1,0 +1,36 @@
+type: interactive
+interactive:
+  type: list
+
+  header:
+    type: text
+    text: ""
+
+  body:
+    text: |
+      Informações gerais dos Narradores
+
+  footer:
+    text: ""
+
+  action:
+    button: "Mostrar Opções"
+
+    sections:
+      - title: "Estatisticas"
+        rows:
+          - id: TODO # Número de Narradores
+            title: "Número de Narradores"
+            description: ""
+          
+          - id: TODO # Desistencias
+            title: "Desistencias"
+            description: ""
+
+          - id: TODO # Presenças
+            title: "Presenças"
+            description: ""
+
+          - id: TODO # Satisfação
+            title: "Satisfação"
+            description: "feita por Jogadores"

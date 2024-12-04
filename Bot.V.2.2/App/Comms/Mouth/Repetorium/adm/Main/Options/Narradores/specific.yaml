@@ -1,0 +1,63 @@
+Narradores:
+  type: interactive
+  interactive:
+    type: list
+
+    header: # Titulo
+      type: text
+      text: ""
+
+    body: # Corpo
+      text: |
+        A baixo seguem as opções relativa aos narradores
+
+    footer:
+      text: ""
+
+    action:
+      button: "Mostrar Opções"
+
+      sections:
+        - title: "Informações"
+          rows:
+            - id: TODO # Matricula
+              title: "Matricula"
+              description: ""
+
+            - id: TODO # Nome
+              title: "Nome"
+              description: ""
+
+            - id: TODO # Telefone
+              title: "Telefone"
+              description: ""
+            
+            - id: TODO # Genero
+              title: "Genero"
+              description: ""
+            
+            - id: TODO # Etinia
+              title: "Etinia"
+              description: ""
+            
+            - id: TODO # Curso de origem
+              title: "Curso de origem"
+              description: ""
+            
+            - id: TODO # Observações
+              title: "Observações"
+              description: ""
+          
+        - title: "Jornada"
+          rows:
+            - id: TODO # Presença
+              title: "Presença"
+              description: ""
+            
+            - id: TODO # Nota
+              title: "Nota"
+              description: ""
+            
+            - id: TODO # Obser de Joga
+              title: "Observações"
+              description: "De jogadores"

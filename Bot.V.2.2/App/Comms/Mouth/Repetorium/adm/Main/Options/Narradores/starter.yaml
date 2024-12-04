@@ -1,0 +1,22 @@
+Starter:  
+  type: interactive
+  interactive:
+    type: button
+
+    body:
+      text: |
+        Deseja informações sobre:
+        Aluno -> Estudante especifico,
+        Turma -> Informações gerais. 
+
+    action:
+      buttons:
+        - type: reply # Aluno
+          reply:
+            id: Todo
+            title: "Aluno"
+        
+        - type: reply # Turma
+          reply:
+            id: Todo
+            title: "Turma"
